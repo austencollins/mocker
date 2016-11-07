@@ -11,8 +11,6 @@ A lightweight testing framework for the Serverless Framework.
 
 ## Quick-Start
 
-### Install
-
 Install with npm:
 
 ```
@@ -25,8 +23,6 @@ Add it to your Serverless Service plugins:
 plugins
   - serverless-flow-plugin
 ```
-
-### Write Mocks
 
 Add a mock property to your Functions:
 
@@ -70,8 +66,6 @@ world: # A function
     query:
       clientId: false
 ```
-
-### Use The Plugin
 
 Start the plugin:
 
