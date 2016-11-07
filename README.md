@@ -4,7 +4,7 @@ A lightweight testing framework for the Serverless Framework.
 
 ## Features
 
-* Write mock events to invoke your functions with while you develop.
+* Write mock events and invoke your functions with them while you write code.
 * On save, this plugin automatically invokes your Function w/ each mock event and prints results in your console.
 * Features a `local` or `remote` mode.  `remote` mode will quickly deploy your function before invoking it with mock data.
 * Write multiple mock events for each event for your functions.
@@ -13,13 +13,13 @@ A lightweight testing framework for the Serverless Framework.
 
 ### Install
 
-* Install with npm:
+Install with npm:
 
 ```
 npm i serverless-flow-plugin --save
 ```
 
-* Add it to your Serverless Service plugins:
+Add it to your Serverless Service plugins:
 
 ```
 plugins
@@ -28,7 +28,7 @@ plugins
 
 ### Write Mocks
 
-* Add a mock property to your Functions:
+Add a mock property to your Functions:
 
 ```yml
 # serverless.yml
@@ -50,7 +50,7 @@ functions
           mocks: ${file(./mocks.yml):world}
 ```
 
-* Create a `mocks.yml` file in your service folder:
+Create a `mocks.yml` file in your service folder:
 
 ```yml
 # mocks.yml
@@ -73,15 +73,15 @@ world: # A function
 
 ### Use The Plugin
 
-* Start the plugin:
+Start the plugin:
 
 ```
 sls flow --function hello --mode local // Local mode invokes the function locally
 ```
 
-* Write code, hit save, and your function will be auto-invoked for each mock.
+Write code, hit save, and your function will be auto-invoked for each mock.
 
-* When you're done working locally, switch the `mode` to `remote` to test your mocks against live Lambdas
+When you're done working locally, switch the `mode` to `remote` to test your mocks against live Lambdas
 
 ```
 sls flow --function hello --mode remote // Remote mode invokes the function on Lambda
