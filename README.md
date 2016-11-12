@@ -36,14 +36,7 @@ functions
       - http:
           path: hello
           method: get
-          mocks: ${file(./mocks.yml):hello}
-  world
-    handler: index.world
-    events:
-      - http:
-          path: world
-          method: get
-          mocks: ${file(./mocks.yml):world}
+          mocks: ${file(./mocks.yml):hello} # References to another file which contains the mocks
 ```
 
 Create a `mocks.yml` file in your service folder:
@@ -51,18 +44,11 @@ Create a `mocks.yml` file in your service folder:
 ```yml
 # mocks.yml
 
-hello: # A function
-  succcess: # A mock for this function
+hello_http: # Contains the mock for the "hello" function and "http" event
+  succcess: # A mock for this function event
     query:
       clientId: aslkfjasf8kajsf981
-  fail: # Another mock for this function
-    query:
-      clientId: false
-world: # A function
-  succcess: # A mock for this function
-    query:
-      clientId: aslkfjasf8kajsf981
-  fail: # Another mock for this function
+  fail: # Another mock for this function event
     query:
       clientId: false
 ```
@@ -70,7 +56,7 @@ world: # A function
 Start the plugin:
 
 ```
-sls flow --function hello --mode local // Local mode invokes the function locally
+sls flow --function hello
 ```
 
 Write code, hit save, and your function will be auto-invoked for each mock.
