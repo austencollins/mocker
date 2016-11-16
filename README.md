@@ -1,6 +1,13 @@
-# Serverless-Flow
+# Serverless Mocker
 
-A lightweight testing framework for the Serverless Framework.
+
+Work in progress...
+
+
+
+
+
+A lightweight testing framework for the Serverless Framework that mocks events.
 
 ## Features
 
@@ -14,14 +21,14 @@ A lightweight testing framework for the Serverless Framework.
 Install with npm:
 
 ```
-npm i serverless-flow-plugin --save
+npm i serverless-mocker-plugin --save
 ```
 
 Add it to your Serverless Service plugins:
 
 ```
 plugins
-  - serverless-flow-plugin
+  - serverless-mocker-plugin
 ```
 
 Add a mock property to your Functions:

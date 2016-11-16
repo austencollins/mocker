@@ -1,6 +1,6 @@
 {
-  "name": "serverless-flow-plugin",
-  "version": "0.0.9",
+  "name": "serverless-mocker-plugin",
+  "version": "0.0.1",
   "engines": {
     "node": ">=4.0"
   },
@@ -9,6 +9,7 @@
   "scripts": {},
   "devDependencies": {},
   "dependencies": {
-    "chokidar": "^1.6.0"
+    "chokidar": "^1.6.0",
+    "lodash": "^4.16.6"
   }
 }
